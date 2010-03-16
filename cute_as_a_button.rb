@@ -85,7 +85,7 @@ class Shoes::App
 
 end
 
-Shoes.app :title => 'Cute As A Button', :width => 150, :height => 110 do
+Shoes.app :title => 'Cute As A Button', :width => 160, :height => 110 do
   working_since = para "#{ws  = 'Started at:'}\n"
   go_home_at    = para "#{gha = 'Go home at:'}\n"
   time_to_go    = para "#{ttg = 'Time to go:'}\n"
