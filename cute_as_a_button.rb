@@ -1,8 +1,10 @@
+HOURS_TO_WORK = 8
+
 class Workday
 
   attr_reader :started_at
 
-  def initialize(started_at = Time.now, worktime = (8 * 3600))
+  def initialize(started_at, worktime)
     @started_at  = started_at
     @paused      = 0
     @working     = true
@@ -25,7 +27,7 @@ class Workday
     @duration = end_of_work - Time.now unless @duration.to_i == 0
   end
 
-  def pausing
+  def idle
     @paused += 1 unless @duration.to_i == 0
   end
 
@@ -39,18 +41,17 @@ class Shoes::App
 
   def time_as_string(time)
     if time.is_a?(Time)
-      time.strftime("%H:%M:%S")
+      time.strftime("%H:%M")
     else
-      "%02d:%02d:%02d" % [
+      "%02d:%02d" % [
         time / (60 * 60),
-        time / 60 % 60,
-        time % 60
+        time / 60 % 60
       ]
     end
   end
 
   def start
-    @workday = Workday.new
+    @workday = Workday.new(Time.now, HOURS_TO_WORK * 3600)
     draw_button_stack('pause')
   end
 
@@ -84,10 +85,10 @@ class Shoes::App
 
 end
 
-Shoes.app :title => 'Cute as a button', :width => 190, :height => 110 do
+Shoes.app :title => 'Cute As A Button', :width => 150, :height => 110 do
   working_since = para "#{ws  = 'Started at:'}\n"
-  time_to_go    = para "#{ttg = 'Time to go:'}\n"
   go_home_at    = para "#{gha = 'Go home at:'}\n"
+  time_to_go    = para "#{ttg = 'Time to go:'}\n"
 
   animate(1) do
     if @workday
@@ -95,7 +96,7 @@ Shoes.app :title => 'Cute as a button', :width => 190, :height => 110 do
         working_since.replace "#{ws}\t#{time_as_string(@workday.started_at)}\n"
         time_to_go.replace "#{ttg}\t#{time_as_string(@workday.duration)}\n"
       else
-        @workday.pausing
+        @workday.idle
       end
       go_home_at.replace "#{gha}\t#{time_as_string(@workday.end_of_work)}\n"
     end
