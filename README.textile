@@ -1,0 +1,28 @@
+h1. Cute As A Button
+
+_Cute As A Button_ is a super simple one button app which helps me to focus my work time. The lag of features is compensated by simplicity.
+It is based on the great "Shoes":http://shoes.heroku.com/ toolkit. Look at Shoes docs to figure out how to use it on your platform.
+
+h2. But Why?
+
+But why release such a silly piece of Software?
+* because my repository list looks a littel less empty now
+* i like the name
+* and i was asked for it - hello Anna! :-)
+
+Alikeness of parts of this text with some kind of an apology are not intended and might only happen accidentally.
+
+h2. License
+
+<p xmlns:dct="http://purl.org/dc/terms/" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
+  <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/" style="text-decoration:none;">
+    <img src="http://i.creativecommons.org/l/zero/1.0/88x31.png" border="0" alt="CC0" />
+  </a>
+  <br />
+  To the extent possible under law,
+  <span rel="dct:publisher" resource="[_:publisher]">the person who associated CC0</span>
+  with this work has waived all copyright and related or neighboring
+  rights to this work.
+</p>
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
